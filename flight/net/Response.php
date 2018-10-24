@@ -292,7 +292,13 @@ class Response {
         }
 
         echo $this->body;
-
+        
+        /**
+         * Call a function that might be declared in index file
+         */
+        if(function_exists("after_api_call")) {
+            after_api_call($this->body);
+        }
         $this->sent = true;
     }
 }
