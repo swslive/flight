@@ -1,3 +1,9 @@
+We added an optional function call after flight outputs json.
+
+Optuional function name is: after_api_call($request_body); If this function does not exist, flight will work as usual. 
+
+We use this function to record each call URL, method, request ehaders and responce body.
+
 # What is Flight?
 
 Flight is a fast, simple, extensible framework for PHP. Flight enables you to 
